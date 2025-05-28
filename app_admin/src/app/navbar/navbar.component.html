@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="/assets/images/logo.png"></a>
+    <div class="navbar-nav">
+        <a class="nav-link active" routerLink="">Trips</a>
+    </div>
+    <div class="navbar-end" style="margin-left:50%;padding: 0 50px;">
+        <a class="nav-item " routerLink="register" *ngIf="!isLoggedIn()" style="text-decoration: none;font-size: 20px;color: rgb(13, 1, 58);">
+            <span class="has-icon-left">Register</span>
+        </a>
+
+        <a class="nav-item mx-4" routerLink="login" *ngIf="!isLoggedIn()"  style="text-decoration: none;font-size: 20px;color: rgb(13, 1, 58);">
+            <span>Log In</span>
+        </a>
+        <a class="nav-item " (click)="onLogout()" *ngIf="isLoggedIn()"  style="text-decoration: none;font-size: 20px;color: rgb(13, 1, 58);">
+            <span>Log Out</span>
+        </a>
+    
+    </div>
+</nav>

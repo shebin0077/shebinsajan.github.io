@@ -1,0 +1,34 @@
+{{> header}}
+<div id="navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li class="selected"><a href="/travel">Travel</a></li>
+        <li><a href="/rooms">Rooms</a></li>
+        <li><a href="/meals">Meals</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</div>
+</div>
+<div id="contents">
+    <div class="box">
+        <div>
+            <div class="body">
+                <h1>Travel</h1>
+                <ul id="sites">
+                    {{#each trips}}
+                    <li style="padding: 20px auto;">
+                        <a href="/travel/{{this.code}}"><img src="images/{{image}}" alt="Img"></a>
+                        <h2><a href="/travel">{{name}}</a></h2>
+                        <p>{{description}}</p>
+                        <p>{{details}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}
